@@ -6,26 +6,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>random color Generator</title>
     <style>
-      #divPalette {
+      #div-palette {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
       }
       div {
         min-height: 80px;
       }
+      a {
+        color: black;
+        text-decoration: none;
+      }
       .hidden {
         display: none;
+      }
+      @media only screen and (max-width: 600px) {
+        .mobile-menu {
+          display: block;
+          margin-bottom: 10px;
+        }
+
+        .desktop-menu ul {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
     <h1>My Random Color Generator</h1>
+
+    <div class="desktop-menu">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Contacts</a></li>
+      </ul>
+    </div>
+
+    <div class="mobile-menu hidden">
+      <button class="mobile-menu-btn">menù</button>
+      <ul class="menu-container hidden">
+        <li><a href="">Home</a></li>
+        <li><a href="">Shop</a></li>
+        <li><a href="">Contacts</a></li>
+      </ul>
+    </div>
     <div class="container">
       <select name="sel" id="selection">
         <option value="">select Color</option>
       </select>
     </div>
-    <div id="divPalette"></div>
+    <div id="div-palette"></div>
 
     <script src="main.js"></script>
   </body>
